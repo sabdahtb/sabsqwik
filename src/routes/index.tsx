@@ -4,13 +4,18 @@ import type { DocumentHead } from "@builder.io/qwik-city";
 import Counter from "../components/starter/counter/counter";
 import Hero from "../components/starter/hero/hero";
 import Infobox from "../components/starter/infobox/infobox";
-import Starter from "../components/starter/next-steps/next-steps";
 
 export default component$(() => {
+  const menus = [
+    {
+      title: "About Us",
+      link: "/about-us",
+    },
+  ];
+
   return (
     <>
       <Hero />
-      <Starter />
 
       <div role="presentation" class="ellipsis"></div>
       <div role="presentation" class="ellipsis ellipsis-purple"></div>
@@ -65,34 +70,14 @@ export default component$(() => {
 
           <Infobox>
             <div q:slot="title" class="icon icon-community">
-              Community
+              Builder Page
             </div>
             <ul>
-              <li>
-                <span>Questions or just want to say hi? </span>
-                <a href="https://qwik.builder.io/chat" target="_blank">
-                  Chat on discord!
-                </a>
-              </li>
-              <li>
-                <span>Follow </span>
-                <a href="https://twitter.com/QwikDev" target="_blank">
-                  @QwikDev
-                </a>
-                <span> on Twitter</span>
-              </li>
-              <li>
-                <span>Open issues and contribute on </span>
-                <a href="https://github.com/BuilderIO/qwik" target="_blank">
-                  GitHub
-                </a>
-              </li>
-              <li>
-                <span>Watch </span>
-                <a href="https://qwik.builder.io/media/" target="_blank">
-                  Presentations, Podcasts, Videos, etc.
-                </a>
-              </li>
+              {menus.map((item, idx) => (
+                <li key={idx}>
+                  <a href={item.link}>{item.title}</a>
+                </li>
+              ))}
             </ul>
           </Infobox>
         </div>

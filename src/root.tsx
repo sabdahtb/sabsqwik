@@ -21,6 +21,7 @@ export default component$(() => {
       <head>
         <meta charSet="utf-8" />
         <link rel="manifest" href="/manifest.json" />
+        <title>SabsQwik</title>
         <RouterHead />
         <ServiceWorkerRegister />
       </head>

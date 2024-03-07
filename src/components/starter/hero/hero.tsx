@@ -69,13 +69,13 @@ export default component$(() => {
         >
           Time to celebrate
         </button>
-        <a
+        {/* <a
           href="https://qwik.builder.io/docs"
           target="_blank"
           class="button button-dark"
         >
           Explore the docs
-        </a>
+        </a> */}
       </div>
     </div>
   );

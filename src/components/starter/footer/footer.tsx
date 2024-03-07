@@ -8,11 +8,11 @@ export default component$(() => {
   return (
     <footer>
       <div class="container">
-        <a href="https://www.builder.io/" target="_blank" class={styles.anchor}>
-          <span>Made with ♡ by Builder.io</span>
+        <p class={styles.anchor}>
+          <span>sabdahtb</span>
           <span class={styles.spacer}>|</span>
-          <span>{serverTime.value.date}</span>
-        </a>
+          <span>{new Date(serverTime.value.date).getFullYear()}</span>
+        </p>
       </div>
     </footer>
   );
